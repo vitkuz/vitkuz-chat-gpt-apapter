@@ -106,6 +106,26 @@ async function testDefaults() {
         throw new Error('schemaName was not applied');
     console.log('Case 5 passed');
 
+    // 6. Test incompatible model with schema
+    console.log('Case 6: Incompatible model with schema');
+    const incompatibleCompletion = createChatCompletion({
+        client: mockClient,
+        defaults: {
+            model: CHAT_GPT_MODELS.GPT_3_5_TURBO,
+            schema: Schema
+        }
+    } as any);
+
+    try {
+        await incompatibleCompletion({
+            messages: [{ role: 'user', content: 'test' }]
+        });
+        throw new Error('Should have thrown error for incompatible model');
+    } catch (e: any) {
+        if (!e.message.includes('does not support Structured Outputs')) throw e;
+        console.log('Case 6 passed (Error caught correctly)');
+    }
+
     console.log('ALL UNIT TESTS PASSED');
 }
 
