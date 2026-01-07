@@ -27,7 +27,7 @@ async function main() {
             messages: [
                 {
                     role: 'user',
-                    content: `A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Explain your reasoning step-by-step.`
+                    content: `A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Explain your reasoning step-by-step.`,
                 },
             ],
         });
