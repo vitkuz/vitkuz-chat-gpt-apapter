@@ -67,6 +67,11 @@ export const CHAT_GPT_MODELS = {
     // Text-to-Speech Models
     TTS_1: 'tts-1',
     TTS_1_HD: 'tts-1-hd',
+
+    // Audio Transcription Models
+    WHISPER_1: 'whisper-1',
+    GPT_4o_TRANSCRIBE: 'gpt-4o-transcribe',
+    GPT_4o_MINI_TRANSCRIBE: 'gpt-4o-mini-transcribe',
 } as const;
 
 export type ChatGptModel = (typeof CHAT_GPT_MODELS)[keyof typeof CHAT_GPT_MODELS];

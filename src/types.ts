@@ -127,3 +127,24 @@ export interface CreateSpeechOutput {
     model: string;
     input?: CreateSpeechInput;
 }
+
+export interface CreateTranscriptionInput {
+    file: Buffer | Uint8Array;
+    model?: string;
+    language?: string;
+    prompt?: string;
+    response_format?: 'json' | 'text' | 'srt' | 'verbose_json' | 'vtt';
+    temperature?: number;
+    timestamp_granularities?: Array<'word' | 'segment'>;
+}
+
+export interface CreateTranscriptionOutput {
+    text: string;
+    duration?: number;
+    language?: string;
+    words?: Array<{ word: string; start: number; end: number }>;
+    segments?: Array<{ id: number; start: number; end: number; text: string }>;
+    price?: PriceInfo;
+    model: string;
+    input?: CreateTranscriptionInput;
+}

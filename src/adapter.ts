@@ -5,10 +5,13 @@ import { createChatCompletion } from './operations/create-chat-completion';
 import { createImage } from './operations/create-image';
 import { createSpeech } from './operations/create-speech';
 
+import { createTranscription } from './operations/create-transcription';
+
 export interface ChatGptAdapter {
     createChatCompletion: ReturnType<typeof createChatCompletion>;
     createImage: ReturnType<typeof createImage>;
     createSpeech: ReturnType<typeof createSpeech>;
+    createTranscription: ReturnType<typeof createTranscription>;
 }
 
 export const createAdapter = (config: ChatGptConfig, logger?: Logger): ChatGptAdapter => {
@@ -19,5 +22,6 @@ export const createAdapter = (config: ChatGptConfig, logger?: Logger): ChatGptAd
         createChatCompletion: createChatCompletion(context),
         createImage: createImage(context),
         createSpeech: createSpeech(context),
+        createTranscription: createTranscription(context),
     };
 };

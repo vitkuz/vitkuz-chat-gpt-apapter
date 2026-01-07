@@ -103,6 +103,12 @@ export const SPEECH_PRICING: Record<string, number> = {
     'tts-hd': 30.0 / 1_000_000, // per character
 };
 
+export const TRANSCRIPTION_PRICING: Record<string, number> = {
+    whisper: 0.006, // per minute
+    'gpt-4o-transcription': 0.006, // per minute
+    'gpt-4o-mini-transcription': 0.003, // per minute
+};
+
 export const calculatePrice = (
     model: string,
     usage?: {
@@ -176,6 +182,31 @@ export const calculateSpeechPrice = (model: string, inputLength: number): PriceI
     if (!rate) return undefined;
 
     const total = inputLength * rate;
+
+    return {
+        total: Number(total.toFixed(6)),
+        inputCost: 0,
+        outputCost: total,
+        currency: 'USD',
+    };
+};
+
+export const calculateTranscriptionPrice = (
+    model: string,
+    durationInSeconds: number,
+): PriceInfo | undefined => {
+    let priceKey = 'whisper';
+    if (model.includes('mini')) {
+        priceKey = 'gpt-4o-mini-transcription';
+    } else if (model.includes('gpt-4o')) {
+        priceKey = 'gpt-4o-transcription';
+    }
+
+    const ratePerMinute = TRANSCRIPTION_PRICING[priceKey];
+    if (ratePerMinute === undefined) return undefined;
+
+    const minutes = durationInSeconds / 60;
+    const total = minutes * ratePerMinute;
 
     return {
         total: Number(total.toFixed(6)),

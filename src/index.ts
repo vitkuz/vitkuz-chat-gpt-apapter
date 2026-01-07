@@ -4,5 +4,6 @@ export * from './adapter';
 export * from './operations/create-chat-completion';
 export * from './operations/create-image';
 export * from './operations/create-speech';
+export * from './operations/create-transcription';
 export * from './models';
 export * from './pricing';
