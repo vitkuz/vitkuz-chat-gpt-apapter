@@ -14,11 +14,7 @@ if (!apiKey) {
 
 const adapter = createAdapter({ apiKey });
 
-const models = [
-    CHAT_GPT_MODELS.GPT_4o_MINI,
-    CHAT_GPT_MODELS.GPT_4o,
-    CHAT_GPT_MODELS.GPT_3_5_TURBO,
-];
+const models = [CHAT_GPT_MODELS.GPT_4o_MINI, CHAT_GPT_MODELS.GPT_4o, CHAT_GPT_MODELS.GPT_3_5_TURBO];
 
 async function main() {
     console.log('Starting Russia History Test...');

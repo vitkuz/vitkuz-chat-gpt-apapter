@@ -3,3 +3,4 @@ export * from './client';
 export * from './adapter';
 export * from './operations/create-chat-completion';
 export * from './models';
+export * from './pricing';

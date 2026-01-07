@@ -16,16 +16,18 @@ if (!apiKey) {
 const adapter = createAdapter({
     apiKey,
     defaults: {
-        model: CHAT_GPT_MODELS.GPT_4o_MINI
-    }
+        model: CHAT_GPT_MODELS.GPT_4o_MINI,
+    },
 });
 
 const TbilisiPlacesSchema = z.object({
-    places: z.array(z.object({
-        name: z.string(),
-        description: z.string(),
-        category: z.enum(['Sightseeing', 'Food', 'Culture', 'Nature', 'Other']),
-    })),
+    places: z.array(
+        z.object({
+            name: z.string(),
+            description: z.string(),
+            category: z.enum(['Sightseeing', 'Food', 'Culture', 'Nature', 'Other']),
+        }),
+    ),
     summary: z.string(),
 });
 
@@ -39,7 +41,7 @@ async function main() {
                 { role: 'user', content: 'What are the best places to visit in Tbilisi?' },
             ],
             schema: TbilisiPlacesSchema,
-            schemaName: 'tbilisi_guide'
+            schemaName: 'tbilisi_guide',
         });
 
         const filePath = join(__dirname, 'responses', 'tbilisi-places.json');
