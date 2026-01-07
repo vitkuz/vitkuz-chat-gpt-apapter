@@ -9,7 +9,7 @@ export interface ChatGptAdapter {
 
 export const createAdapter = (config: ChatGptConfig, logger?: Logger): ChatGptAdapter => {
     const client = createChatGptClient(config);
-    const context: ChatGptContext = { client, logger };
+    const context: ChatGptContext = { client, logger, defaults: config.defaults };
 
     return {
         createChatCompletion: createChatCompletion(context),

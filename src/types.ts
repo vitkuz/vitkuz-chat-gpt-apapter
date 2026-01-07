@@ -1,19 +1,30 @@
 import OpenAI from 'openai';
+import { z } from 'zod';
 
 export interface Logger {
     debug: (message: string, context?: { error?: any; data?: any }) => void;
     [key: string]: any;
 }
 
+export interface ChatGptDefaults {
+    model?: string;
+    temperature?: number;
+    response_format?: CreateChatCompletionInput['response_format'];
+    schema?: z.ZodType;
+    schemaName?: string;
+}
+
 export interface ChatGptConfig {
     apiKey: string;
     organization?: string;
     project?: string;
+    defaults?: ChatGptDefaults;
 }
 
 export interface ChatGptContext {
     client: OpenAI;
     logger?: Logger;
+    defaults?: ChatGptDefaults;
 }
 
 export type ChatMessageRole = 'system' | 'user' | 'assistant' | 'tool' | 'developer';
@@ -25,7 +36,7 @@ export interface ChatMessage {
 }
 
 export interface CreateChatCompletionInput {
-    model: string;
+    model?: string;
     messages: ChatMessage[];
     temperature?: number;
     max_tokens?: number;
@@ -40,6 +51,8 @@ export interface CreateChatCompletionInput {
             schema: Record<string, any>;
         };
     };
+    schema?: z.ZodType;
+    schemaName?: string;
     stop?: string | string[];
 }
 
@@ -50,9 +63,14 @@ export interface CreateChatCompletionOutput {
     model: string;
     choices: {
         index: number;
-        message: ChatMessage;
+        message: ChatMessage & {
+            parsed?: any;
+            refusal?: string;
+        };
         finish_reason: string;
     }[];
+    parsed?: any;
+    refusal?: string;
     usage?: {
         prompt_tokens: number;
         completion_tokens: number;

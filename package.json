@@ -23,7 +23,8 @@
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
     },
     "dependencies": {
-        "openai": "^4.77.0"
+        "openai": "^4.77.0",
+        "zod": "^3.25.76"
     },
     "devDependencies": {
         "@types/node": "^22.10.2",

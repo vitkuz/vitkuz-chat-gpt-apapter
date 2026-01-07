@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv';
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { createAdapter } from '../src/index';
+import { createAdapter, CHAT_GPT_MODELS } from '../src/index';
 
 dotenv.config({ path: join(__dirname, '../.env') });
 
@@ -23,7 +23,7 @@ async function main() {
     try {
         console.log('Testing createChatCompletion with text...');
         const result = await adapter.createChatCompletion({
-            model: 'gpt-4o',
+            model: CHAT_GPT_MODELS.GPT_4o,
             messages: [
                 { role: 'system', content: 'You are a helpful assistant.' },
                 { role: 'user', content: 'Hello! How are you?' },
@@ -37,7 +37,7 @@ async function main() {
 
         console.log('\nTesting createChatCompletion with JSON Schema...');
         const jsonResult = await adapter.createChatCompletion({
-            model: 'gpt-4o-2024-08-06',
+            model: CHAT_GPT_MODELS.GPT_4o, // Or any other specific model if needed
             messages: [
                 { role: 'system', content: 'Extract information from the text.' },
                 { role: 'user', content: 'The weather in London is 15 degrees and sunny.' },
