@@ -1,12 +1,13 @@
 import { ChatGptContext, CreateImageInput, CreateImageOutput } from '../types';
 import { calculateImagePrice } from '../pricing';
+import { CHAT_GPT_MODELS } from '../models';
 
 export const createImage =
     (ctx: ChatGptContext) =>
         async (input: CreateImageInput): Promise<CreateImageOutput> => {
             const { client, logger } = ctx;
 
-            const model = input.model || 'dall-e-3';
+            const model = input.model || CHAT_GPT_MODELS.DALL_E_3;
             const mergedInput = {
                 ...input,
                 model,
