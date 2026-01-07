@@ -63,6 +63,10 @@ export const CHAT_GPT_MODELS = {
     // Image Generation Models
     DALL_E_3: 'dall-e-3',
     DALL_E_2: 'dall-e-2',
+
+    // Text-to-Speech Models
+    TTS_1: 'tts-1',
+    TTS_1_HD: 'tts-1-hd',
 } as const;
 
 export type ChatGptModel = (typeof CHAT_GPT_MODELS)[keyof typeof CHAT_GPT_MODELS];
