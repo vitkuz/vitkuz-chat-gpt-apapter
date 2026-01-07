@@ -1,9 +1,9 @@
 {
-  "created": 1767794506,
+  "created": 1767795083,
   "data": [
     {
-      "revised_prompt": "Depict a breathtaking scene of a sunset descending over the mountains in Georgia. Capture the myriad of colors that fill the sky, the purples, oranges, and blues, against the dark silhouette of the mountains. This scene should be illustrated in a style reminiscent of digital art, utilizing vivid details and sharp contrasts to mimic its unique aesthetic.",
-      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-fbrdx4qb5vvo8bZ8V9muHeve/user-93duYg8XMW2xsj7J5ij1t8qc/img-43JnG8KgwIwFRDBOsYYjh2zX.png?st=2026-01-07T13%3A01%3A45Z&se=2026-01-07T15%3A01%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=31d50bd4-689f-439b-a875-f22bd677744d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-07T14%3A01%3A45Z&ske=2026-01-08T14%3A01%3A45Z&sks=b&skv=2024-08-04&sig=5x5RVa2sMxtFC1O/Ef3cnWgjHpBV2dGKOsaEFhc8HGk%3D"
+      "revised_prompt": "Create a charming illustration of a sunset over towering mountains, as viewed from a distance. Use the lush, vibrant hues typical of a Georgian landscape during twilight. Accentuate the fading light of the sun, casting an enchanting golden blush over the scenery. Complement the scene with the silhouette of area-specific flora and fauna. Render this scene in the style characteristic of digital artwork, using rich, saturated colors and delicate, precise detailing to capture the beauty and tranquility of the moment.",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-fbrdx4qb5vvo8bZ8V9muHeve/user-93duYg8XMW2xsj7J5ij1t8qc/img-ZEZOHO1K6oELzqW2lBVLZgXd.png?st=2026-01-07T13%3A11%3A23Z&se=2026-01-07T15%3A11%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=31d50bd4-689f-439b-a875-f22bd677744d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-07T08%3A59%3A07Z&ske=2026-01-08T08%3A59%3A07Z&sks=b&skv=2024-08-04&sig=7NFf%2B60rfAmQatl24HUg9z/Me/TwjcSUn2/CTdagPT0%3D"
     }
   ],
   "price": {
@@ -12,6 +12,7 @@
     "outputCost": 0.04,
     "currency": "USD"
   },
+  "model": "dall-e-3",
   "input": {
     "prompt": "A beautiful sunset over the mountains in Georgia, digital art style.",
     "model": "dall-e-3",

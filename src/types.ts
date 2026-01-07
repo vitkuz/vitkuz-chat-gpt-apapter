@@ -109,6 +109,7 @@ export interface CreateImageOutput {
         revised_prompt?: string;
     }[];
     price?: PriceInfo;
+    model: string;
     input?: CreateImageInput;
 }
 
@@ -123,5 +124,6 @@ export interface CreateSpeechInput {
 export interface CreateSpeechOutput {
     data: Buffer | Uint8Array;
     price?: PriceInfo;
+    model: string;
     input?: CreateSpeechInput;
 }
