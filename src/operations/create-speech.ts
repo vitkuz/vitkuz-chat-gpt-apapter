@@ -3,33 +3,33 @@ import { calculateSpeechPrice } from '../pricing';
 
 export const createSpeech =
     (ctx: ChatGptContext) =>
-        async (input: CreateSpeechInput): Promise<CreateSpeechOutput> => {
-            const { client, logger } = ctx;
+    async (input: CreateSpeechInput): Promise<CreateSpeechOutput> => {
+        const { client, logger } = ctx;
 
-            const model = input.model || 'tts-1';
-            const mergedInput = {
-                ...input,
-                model,
+        const model = input.model || 'tts-1';
+        const mergedInput = {
+            ...input,
+            model,
+        };
+
+        logger?.debug('chat-gpt:createSpeech:start', { data: mergedInput });
+
+        try {
+            const response = await client.audio.speech.create(mergedInput as any);
+            const buffer = Buffer.from(await response.arrayBuffer());
+
+            const price = calculateSpeechPrice(model, input.input.length);
+
+            const output: CreateSpeechOutput = {
+                data: buffer,
+                price,
             };
 
-            logger?.debug('chat-gpt:createSpeech:start', { data: mergedInput });
+            logger?.debug('chat-gpt:createSpeech:success', { data: { price } });
 
-            try {
-                const response = await client.audio.speech.create(mergedInput as any);
-                const buffer = Buffer.from(await response.arrayBuffer());
-
-                const price = calculateSpeechPrice(model, input.input.length);
-
-                const output: CreateSpeechOutput = {
-                    data: buffer,
-                    price,
-                };
-
-                logger?.debug('chat-gpt:createSpeech:success', { data: { price } });
-
-                return output;
-            } catch (error) {
-                logger?.debug('chat-gpt:createSpeech:error', { error });
-                throw error;
-            }
-        };
+            return output;
+        } catch (error) {
+            logger?.debug('chat-gpt:createSpeech:error', { error });
+            throw error;
+        }
+    };

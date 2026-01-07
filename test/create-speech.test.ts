@@ -18,11 +18,12 @@ async function main() {
     console.log('Starting Speech Generation Test...');
 
     try {
-        const input = 'Hello, this is a test of the new speech generation feature in the ChatGPT adapter.';
+        const input =
+            'Hello, this is a test of the new speech generation feature in the ChatGPT adapter.';
         const result = await adapter.createSpeech({
             input,
             model: 'tts-1',
-            voice: 'alloy'
+            voice: 'alloy',
         });
 
         const filePath = join(__dirname, 'responses', 'speech-generation.mp3');

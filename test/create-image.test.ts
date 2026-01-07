@@ -22,7 +22,7 @@ async function main() {
             prompt: 'A beautiful sunset over the mountains in Georgia, digital art style.',
             model: 'dall-e-3',
             size: '1024x1024',
-            quality: 'standard'
+            quality: 'standard',
         });
 
         const filePath = join(__dirname, 'responses', 'image-generation.json');
