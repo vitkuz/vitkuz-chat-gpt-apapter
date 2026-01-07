@@ -1,9 +1,9 @@
 {
-  "created": 1767793724,
+  "created": 1767794506,
   "data": [
     {
-      "revised_prompt": "A stunning sunset casting a warm, golden glow over the rocky canyons, pine-clad slopes, and high peaks of a mountainous landscape in Georgia. Render this scene in a style reminiscent of digital art, with clear lines, vibrant colors, and the use of techniques such as layering and blending.",
-      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-fbrdx4qb5vvo8bZ8V9muHeve/user-93duYg8XMW2xsj7J5ij1t8qc/img-0iHC9dct5MvRtwWzLVZQMMqz.png?st=2026-01-07T12%3A48%3A44Z&se=2026-01-07T14%3A48%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=0e2a3d55-e963-40c9-9c89-2a1aa28cb3ac&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-07T11%3A00%3A47Z&ske=2026-01-08T11%3A00%3A47Z&sks=b&skv=2024-08-04&sig=xkZdiGrCv3l0y6SS978FvSAnSgJnRgh2ahKKRrHNR2M%3D"
+      "revised_prompt": "Depict a breathtaking scene of a sunset descending over the mountains in Georgia. Capture the myriad of colors that fill the sky, the purples, oranges, and blues, against the dark silhouette of the mountains. This scene should be illustrated in a style reminiscent of digital art, utilizing vivid details and sharp contrasts to mimic its unique aesthetic.",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-fbrdx4qb5vvo8bZ8V9muHeve/user-93duYg8XMW2xsj7J5ij1t8qc/img-43JnG8KgwIwFRDBOsYYjh2zX.png?st=2026-01-07T13%3A01%3A45Z&se=2026-01-07T15%3A01%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=31d50bd4-689f-439b-a875-f22bd677744d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-07T14%3A01%3A45Z&ske=2026-01-08T14%3A01%3A45Z&sks=b&skv=2024-08-04&sig=5x5RVa2sMxtFC1O/Ef3cnWgjHpBV2dGKOsaEFhc8HGk%3D"
     }
   ],
   "price": {
@@ -11,5 +11,11 @@
     "inputCost": 0,
     "outputCost": 0.04,
     "currency": "USD"
+  },
+  "input": {
+    "prompt": "A beautiful sunset over the mountains in Georgia, digital art style.",
+    "model": "dall-e-3",
+    "size": "1024x1024",
+    "quality": "standard"
   }
 }

@@ -87,6 +87,7 @@ export interface CreateChatCompletionOutput {
         };
     };
     price?: PriceInfo;
+    input?: CreateChatCompletionInput;
 }
 
 export interface CreateImageInput {
@@ -108,6 +109,7 @@ export interface CreateImageOutput {
         revised_prompt?: string;
     }[];
     price?: PriceInfo;
+    input?: CreateImageInput;
 }
 
 export interface CreateSpeechInput {
@@ -121,4 +123,5 @@ export interface CreateSpeechInput {
 export interface CreateSpeechOutput {
     data: Buffer | Uint8Array;
     price?: PriceInfo;
+    input?: CreateSpeechInput;
 }

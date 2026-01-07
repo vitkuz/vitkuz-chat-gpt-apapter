@@ -59,6 +59,10 @@ export const CHAT_GPT_MODELS = {
 
     // Specialized Preview
     COMPUTER_USE_PREVIEW: 'computer-use-preview',
+
+    // Image Generation Models
+    DALL_E_3: 'dall-e-3',
+    DALL_E_2: 'dall-e-2',
 } as const;
 
 export type ChatGptModel = (typeof CHAT_GPT_MODELS)[keyof typeof CHAT_GPT_MODELS];
