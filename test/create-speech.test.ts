@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv';
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { createAdapter } from '../src/index';
+import { createAdapter, CHAT_GPT_MODELS } from '../src/index';
 
 dotenv.config({ path: join(__dirname, '../.env') });
 
@@ -17,22 +17,28 @@ const adapter = createAdapter({ apiKey });
 async function main() {
     console.log('Starting Speech Generation Test...');
 
-    try {
-        const input =
-            'Hello, this is a test of the new speech generation feature in the ChatGPT adapter.';
-        const result = await adapter.createSpeech({
-            input,
-            model: 'tts-1',
-            voice: 'alloy',
-        });
+    const models = [CHAT_GPT_MODELS.TTS_1, CHAT_GPT_MODELS.TTS_1_HD];
 
-        const filePath = join(__dirname, 'responses', 'speech-generation.mp3');
-        await writeFile(filePath, result.data);
+    for (const model of models) {
+        try {
+            console.log(`Testing model: ${model}`);
+            const input =
+                `Hello, this is a test of the ${model} speech generation in the ChatGPT adapter.`;
+            const result = await adapter.createSpeech({
+                input,
+                model,
+                voice: 'alloy',
+            });
 
-        console.log(`Saved result to ${filePath}`);
-        console.log(`Cost: ${result.price?.total} ${result.price?.currency}`);
-    } catch (error) {
-        console.error('Speech Generation Test Failed:', error);
+            const fileName = `${model}-speech-generation.mp3`;
+            const filePath = join(__dirname, 'responses', fileName);
+            await writeFile(filePath, result.data);
+
+            console.log(`Saved result to ${filePath}`);
+            console.log(`Cost: ${result.price?.total} ${result.price?.currency}`);
+        } catch (error) {
+            console.error(`Speech Generation Test Failed for model ${model}:`, error);
+        }
     }
 
     console.log('Speech Generation Test Completed.');
