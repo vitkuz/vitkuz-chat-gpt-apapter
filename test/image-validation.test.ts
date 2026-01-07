@@ -14,9 +14,9 @@ if (!apiKey) {
 // Custom logger to capture errors
 let lastError: { message: string; data: any } | null = null;
 const logger = {
-    debug: () => { },
-    info: () => { },
-    warn: () => { },
+    debug: () => {},
+    info: () => {},
+    warn: () => {},
     error: (message: string, data: any) => {
         console.log(`Captured expected error: ${message}`, data);
         lastError = { message, data };
