@@ -1,0 +1,41 @@
+{
+  "id": "chatcmpl-CvNzyKkVuiCrw6Lc4v2SUILAFg2LP",
+  "object": "chat.completion",
+  "created": 1767792982,
+  "model": "o3-mini-2025-01-31",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Let the cost of the ball be x dollars. Since the bat costs $1.00 more than the ball, the bat costs x + 1 dollars.\n\nAccording to the problem, the total cost is $1.10. So, we can set up the following equation:\n\n  x (ball) + (x + 1) (bat) = 1.10\n\nCombine like terms:\n\n  2x + 1 = 1.10\n\nSubtract 1 from both sides to isolate the term with x:\n\n  2x = 1.10 - 1\n  2x = 0.10\n\nDivide both sides by 2:\n\n  x = 0.10 / 2\n  x = 0.05\n\nThus, the cost of the ball is $0.05 (5 cents).",
+        "refusal": null,
+        "annotations": []
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 45,
+    "completion_tokens": 330,
+    "total_tokens": 375,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 128,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_d48b29c73d",
+  "price": {
+    "total": 0.001502,
+    "inputCost": 0.00005,
+    "outputCost": 0.001452,
+    "currency": "USD"
+  }
+}
