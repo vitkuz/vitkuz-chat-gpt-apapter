@@ -1,0 +1,15 @@
+{
+  "created": 1767793724,
+  "data": [
+    {
+      "revised_prompt": "A stunning sunset casting a warm, golden glow over the rocky canyons, pine-clad slopes, and high peaks of a mountainous landscape in Georgia. Render this scene in a style reminiscent of digital art, with clear lines, vibrant colors, and the use of techniques such as layering and blending.",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-fbrdx4qb5vvo8bZ8V9muHeve/user-93duYg8XMW2xsj7J5ij1t8qc/img-0iHC9dct5MvRtwWzLVZQMMqz.png?st=2026-01-07T12%3A48%3A44Z&se=2026-01-07T14%3A48%3A44Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=0e2a3d55-e963-40c9-9c89-2a1aa28cb3ac&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-07T11%3A00%3A47Z&ske=2026-01-08T11%3A00%3A47Z&sks=b&skv=2024-08-04&sig=xkZdiGrCv3l0y6SS978FvSAnSgJnRgh2ahKKRrHNR2M%3D"
+    }
+  ],
+  "price": {
+    "total": 0.04,
+    "inputCost": 0,
+    "outputCost": 0.04,
+    "currency": "USD"
+  }
+}

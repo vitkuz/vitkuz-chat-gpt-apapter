@@ -88,3 +88,37 @@ export interface CreateChatCompletionOutput {
     };
     price?: PriceInfo;
 }
+
+export interface CreateImageInput {
+    prompt: string;
+    model?: string;
+    n?: number;
+    quality?: 'standard' | 'hd';
+    response_format?: 'url' | 'b64_json';
+    size?: '256x256' | '512x512' | '1024x1024' | '1024x1792' | '1792x1024';
+    style?: 'vivid' | 'natural';
+    user?: string;
+}
+
+export interface CreateImageOutput {
+    created: number;
+    data: {
+        url?: string;
+        b64_json?: string;
+        revised_prompt?: string;
+    }[];
+    price?: PriceInfo;
+}
+
+export interface CreateSpeechInput {
+    model?: string;
+    input: string;
+    voice: 'alloy' | 'echo' | 'fable' | 'onyx' | 'nova' | 'shimmer';
+    response_format?: 'mp3' | 'opus' | 'aac' | 'flac' | 'wav' | 'pcm';
+    speed?: number;
+}
+
+export interface CreateSpeechOutput {
+    data: Buffer | Uint8Array;
+    price?: PriceInfo;
+}

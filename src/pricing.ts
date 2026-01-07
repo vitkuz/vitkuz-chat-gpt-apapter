@@ -6,6 +6,11 @@ export interface ModelPricing {
     cachedInput?: number; // cost per 1M tokens
 }
 
+export interface ImagePricing {
+    standard: Record<string, number>;
+    hd: Record<string, number>;
+}
+
 export const CHAT_GPT_PRICING: Record<string, ModelPricing> = {
     // GPT-5 (Standard)
     'gpt-5.2': { input: 1.75, cachedInput: 0.175, output: 14.0 },
@@ -70,6 +75,34 @@ export const CHAT_GPT_PRICING: Record<string, ModelPricing> = {
     'computer-use-preview': { input: 3.0, output: 12.0 },
 };
 
+export const IMAGE_PRICING: Record<string, ImagePricing> = {
+    'dall-e-3': {
+        standard: {
+            '1024x1024': 0.04,
+            '1024x1792': 0.08,
+            '1792x1024': 0.08,
+        },
+        hd: {
+            '1024x1024': 0.08,
+            '1024x1792': 0.12,
+            '1792x1024': 0.12,
+        },
+    },
+    'dall-e-2': {
+        standard: {
+            '1024x1024': 0.02,
+            '512x512': 0.018,
+            '256x256': 0.016,
+        },
+        hd: {}, // no hd for dall-e-2
+    },
+};
+
+export const SPEECH_PRICING: Record<string, number> = {
+    tts: 15.0 / 1_000_000, // per character
+    'tts-hd': 30.0 / 1_000_000, // per character
+};
+
 export const calculatePrice = (
     model: string,
     usage?: {
@@ -105,6 +138,49 @@ export const calculatePrice = (
         total: Number((inputCost + outputCost).toFixed(6)),
         inputCost: Number(inputCost.toFixed(6)),
         outputCost: Number(outputCost.toFixed(6)),
+        currency: 'USD',
+    };
+};
+
+export const calculateImagePrice = (
+    model: string,
+    size: string = '1024x1024',
+    quality: string = 'standard',
+    n: number = 1,
+): PriceInfo | undefined => {
+    const pricing = IMAGE_PRICING[model];
+    if (!pricing) return undefined;
+
+    const unitPrice =
+        quality === 'hd'
+            ? pricing.hd[size as keyof typeof pricing.hd]
+            : pricing.standard[size as keyof typeof pricing.standard];
+
+    if (unitPrice === undefined) return undefined;
+
+    const total = unitPrice * n;
+
+    return {
+        total: Number(total.toFixed(6)),
+        inputCost: 0,
+        outputCost: total,
+        currency: 'USD',
+    };
+};
+
+export const calculateSpeechPrice = (model: string, inputLength: number): PriceInfo | undefined => {
+    // Model in API is 'tts-1' or 'tts-1-hd'
+    const priceKey = model.includes('hd') ? 'tts-hd' : 'tts';
+    const rate = SPEECH_PRICING[priceKey];
+
+    if (!rate) return undefined;
+
+    const total = inputLength * rate;
+
+    return {
+        total: Number(total.toFixed(6)),
+        inputCost: 0,
+        outputCost: total,
         currency: 'USD',
     };
 };

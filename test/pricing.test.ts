@@ -1,4 +1,4 @@
-import { calculatePrice } from '../src/pricing';
+import { calculatePrice, calculateImagePrice, calculateSpeechPrice } from '../src/pricing';
 
 async function testPricing() {
     console.log('Running pricing tests...');
@@ -44,6 +44,25 @@ async function testPricing() {
         output_tokens: 1_000_000,
     } as any);
     if (p5?.total !== 0.75) throw new Error(`Incorrect price p5: ${p5?.total}`);
+
+    // 6. Image pricing
+    console.log('Case 6: Image pricing');
+    const p6 = calculateImagePrice('dall-e-3', '1024x1024', 'standard', 1);
+    if (p6?.total !== 0.04) throw new Error(`Incorrect price p6: ${p6?.total}`);
+
+    const p6_hd = calculateImagePrice('dall-e-3', '1024x1792', 'hd', 2);
+    // 0.12 * 2 = 0.24
+    if (p6_hd?.total !== 0.24) throw new Error(`Incorrect price p6_hd: ${p6_hd?.total}`);
+
+    // 7. Speech pricing
+    console.log('Case 7: Speech pricing');
+    const p7 = calculateSpeechPrice('tts-1', 1000);
+    // (1000 * 15) / 1M = 0.015
+    if (p7?.total !== 0.015) throw new Error(`Incorrect price p7: ${p7?.total}`);
+
+    const p7_hd = calculateSpeechPrice('tts-1-hd', 1000);
+    // (1000 * 30) / 1M = 0.03
+    if (p7_hd?.total !== 0.03) throw new Error(`Incorrect price p7_hd: ${p7_hd?.total}`);
 
     console.log('ALL PRICING TESTS PASSED');
 }
