@@ -1,22 +1,15 @@
-import * as dotenv from 'dotenv';
 import { join } from 'node:path';
 import { createAdapter, CHAT_GPT_MODELS } from '../src/index';
+import { getRequiredVariable } from './common';
 
-dotenv.config({ path: join(__dirname, '../.env') });
-
-const apiKey = process.env.OPENAI_API_KEY;
-
-if (!apiKey) {
-    console.error('OPENAI_API_KEY environment variable is required');
-    process.exit(1);
-}
+const apiKey = getRequiredVariable('OPENAI_API_KEY');
 
 // Custom logger to capture errors
 let lastError: { message: string; data: any } | null = null;
 const logger = {
-    debug: () => {},
-    info: () => {},
-    warn: () => {},
+    debug: () => { },
+    info: () => { },
+    warn: () => { },
     error: (message: string, data: any) => {
         console.log(`Captured expected error: ${message}`, data);
         lastError = { message, data };
