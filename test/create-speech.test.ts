@@ -22,8 +22,7 @@ async function main() {
     for (const model of models) {
         try {
             console.log(`Testing model: ${model}`);
-            const input =
-                `Hello, this is a test of the ${model} speech generation in the ChatGPT adapter.`;
+            const input = `Hello, this is a test of the ${model} speech generation in the ChatGPT adapter.`;
             const result = await adapter.createSpeech({
                 input,
                 model,
