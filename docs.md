@@ -33,8 +33,17 @@ const result = await adapter.createChatCompletion({
     schemaName: 'user_info'
 });
 
-console.log(result.parsed); // { name: 'John', age: 30 }
+console.log(result.parsed); // Type-safe: { name: 'John', age: 30 }
 ```
+
+## Supported Models for Structured Outputs
+
+The Structured Outputs feature (using Zod or JSON Schema) is supported by the following models:
+
+- `gpt-4o-mini` (and snapshots like `gpt-4o-mini-2024-07-18`)
+- `gpt-4o` from snapshot `gpt-4o-2024-08-06` and later
+
+For older models like `gpt-4-turbo`, `gpt-4`, or `gpt-3.5-turbo`, the adapter will fallback to regular completion (or you can use JSON Mode via `response_format`).
 
 ---
 
