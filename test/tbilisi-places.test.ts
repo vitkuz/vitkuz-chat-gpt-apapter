@@ -1,17 +1,10 @@
-import * as dotenv from 'dotenv';
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { z } from 'zod';
 import { createAdapter, CHAT_GPT_MODELS } from '../src/index';
+import { getRequiredVariable } from './common';
 
-dotenv.config({ path: join(__dirname, '../.env') });
-
-const apiKey = process.env.OPENAI_API_KEY;
-
-if (!apiKey) {
-    console.error('OPENAI_API_KEY environment variable is required');
-    process.exit(1);
-}
+const apiKey = getRequiredVariable('OPENAI_API_KEY');
 
 const adapter = createAdapter({
     apiKey,
