@@ -1,4 +1,3 @@
-import { join } from 'node:path';
 import { createAdapter, CHAT_GPT_MODELS } from '../src/index';
 import { getRequiredVariable } from './common';
 

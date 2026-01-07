@@ -1,13 +1,13 @@
 {
-  "id": "resp_0ab2834194a6143a00695e606735548195a6f0d61d4d39fe8b",
+  "id": "resp_0fed79766da169d700695e6f30d7608196aa423cbcc60f76d4",
   "object": "response",
-  "created_at": 1767792743,
+  "created_at": 1767796528,
   "status": "completed",
   "background": false,
   "billing": {
     "payer": "developer"
   },
-  "completed_at": 1767792755,
+  "completed_at": 1767796537,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -16,7 +16,7 @@
   "model": "gpt-4o-mini-2024-07-18",
   "output": [
     {
-      "id": "msg_0ab2834194a6143a00695e606802788195b7277a1fcc618df5",
+      "id": "msg_0fed79766da169d700695e6f316c4c8196963e57c650b36da6",
       "type": "message",
       "status": "completed",
       "content": [
@@ -24,56 +24,61 @@
           "type": "output_text",
           "annotations": [],
           "logprobs": [],
-          "text": "{\"places\":[{\"name\":\"Narikala Fortress\",\"description\":\"An ancient fortress overlooking Tbilisi, offering stunning views of the city and a glimpse into its historical architecture.\",\"category\":\"Sightseeing\"},{\"name\":\"Old Tbilisi\",\"description\":\"A charming area filled with narrow streets, colorful balconies, and historic buildings that showcase the city's diverse culture.\",\"category\":\"Culture\"},{\"name\":\"Rustaveli Avenue\",\"description\":\"The main thoroughfare of Tbilisi lined with shops, theaters, and cafés, perfect for a leisurely stroll or a day of sightseeing.\",\"category\":\"Sightseeing\"},{\"name\":\"Tbilisi Sulphur Baths\",\"description\":\"Famous for their therapeutic properties, these traditional baths are a unique experience in the heart of the city.\",\"category\":\"Other\"},{\"name\":\"Mtatsminda Park\",\"description\":\"A lively amusement park located on a mountain overlooking Tbilisi, with fun rides and panoramic views of the city.\",\"category\":\"Nature\"},{\"name\":\"Fabrika\",\"description\":\"A trendy spot that combines a hostel, bar, and café, attracting locals and tourists alike for its vibrant atmosphere.\",\"category\":\"Food\"},{\"name\":\"Georgian National Museum\",\"description\":\"A comprehensive museum showcasing the rich history and culture of Georgia through various exhibits.\",\"category\":\"Culture\"},{\"name\":\"Freedom Square\",\"description\":\"A central plaza in Tbilisi that is a hub for social and political gatherings, surrounded by significant buildings and landmarks.\",\"category\":\"Sightseeing\"},{\"name\":\"Chronicle of Georgia\",\"description\":\"A monumental sculpture that tells the story of Georgia's history, located on a hill with spectacular city views.\",\"category\":\"Sightseeing\"}],\"summary\":\"Tbilisi blends history, culture, and nature beautifully. Must-visit spots include the ancient Narikala Fortress, the charming streets of Old Tbilisi, and the relaxing sulfur baths. Don't miss vibrant areas like Rustaveli Avenue and modern attractions like Fabrika for a taste of local life.\"}",
+          "text": "{\"places\":[{\"name\":\"Narikala Fortress\",\"description\":\"An ancient fortress offering panoramic views of Tbilisi and the Kura River, accessible by a cable car.\",\"category\":\"Sightseeing\"},{\"name\":\"Tbilisi Old Town\",\"description\":\"Charming narrow streets filled with beautiful architecture, cafés, and shops that reflect the city’s rich history.\",\"category\":\"Culture\"},{\"name\":\" sulfur baths\",\"description\":\"Famous for their natural hot springs; a perfect place to relax and experience local traditions in the Abanotubani district.\",\"category\":\"Other\"},{\"name\":\"Mtatsminda Park\",\"description\":\"Located on a hill, this park offers rides, restaurants, and fantastic views of the city.\",\"category\":\"Nature\"},{\"name\":\"Rustaveli Avenue\",\"description\":\"The main avenue known for its theaters, museums, and vibrant atmosphere, representing modern Tbilisi culture.\",\"category\":\"Culture\"},{\"name\":\"The Bridge of Peace\",\"description\":\"A modern pedestrian bridge made of glass and steel, symbolizing the city's integration of tradition and modernity.\",\"category\":\"Sightseeing\"},{\"name\":\"Fabrika\",\"description\":\"A trendy space that features a hostel, art galleries, and workshops, ideal for finding local crafts and enjoying street food.\",\"category\":\"Food\"},{\"name\":\"Museum of Georgia\",\"description\":\"Home to a vast collection of archaeological artifacts, including the famous gold treasure of Colchis.\",\"category\":\"Culture\"},{\"name\":\"Holy Trinity Cathedral (Sameba)\",\"description\":\"One of the largest Orthodox cathedrals in the world, known for its impressive architecture and beautiful interior.\",\"category\":\"Sightseeing\"},{\"name\":\"Lisi Lake\",\"description\":\"A picturesque lake surrounded by nature, ideal for picnics, walks, and leisure activities.\",\"category\":\"Nature\"}],\"summary\":\"Tbilisi is a vibrant blend of old and new, rich in history, culture, and natural beauty. From ancient fortresses and charming old streets to modern architecture and serene lakes, there's something for every type of traveler.\"}",
           "parsed": {
             "places": [
               {
                 "name": "Narikala Fortress",
-                "description": "An ancient fortress overlooking Tbilisi, offering stunning views of the city and a glimpse into its historical architecture.",
+                "description": "An ancient fortress offering panoramic views of Tbilisi and the Kura River, accessible by a cable car.",
                 "category": "Sightseeing"
               },
               {
-                "name": "Old Tbilisi",
-                "description": "A charming area filled with narrow streets, colorful balconies, and historic buildings that showcase the city's diverse culture.",
+                "name": "Tbilisi Old Town",
+                "description": "Charming narrow streets filled with beautiful architecture, cafés, and shops that reflect the city’s rich history.",
                 "category": "Culture"
               },
               {
-                "name": "Rustaveli Avenue",
-                "description": "The main thoroughfare of Tbilisi lined with shops, theaters, and cafés, perfect for a leisurely stroll or a day of sightseeing.",
-                "category": "Sightseeing"
-              },
-              {
-                "name": "Tbilisi Sulphur Baths",
-                "description": "Famous for their therapeutic properties, these traditional baths are a unique experience in the heart of the city.",
+                "name": " sulfur baths",
+                "description": "Famous for their natural hot springs; a perfect place to relax and experience local traditions in the Abanotubani district.",
                 "category": "Other"
               },
               {
                 "name": "Mtatsminda Park",
-                "description": "A lively amusement park located on a mountain overlooking Tbilisi, with fun rides and panoramic views of the city.",
+                "description": "Located on a hill, this park offers rides, restaurants, and fantastic views of the city.",
                 "category": "Nature"
               },
               {
-                "name": "Fabrika",
-                "description": "A trendy spot that combines a hostel, bar, and café, attracting locals and tourists alike for its vibrant atmosphere.",
-                "category": "Food"
-              },
-              {
-                "name": "Georgian National Museum",
-                "description": "A comprehensive museum showcasing the rich history and culture of Georgia through various exhibits.",
+                "name": "Rustaveli Avenue",
+                "description": "The main avenue known for its theaters, museums, and vibrant atmosphere, representing modern Tbilisi culture.",
                 "category": "Culture"
               },
               {
-                "name": "Freedom Square",
-                "description": "A central plaza in Tbilisi that is a hub for social and political gatherings, surrounded by significant buildings and landmarks.",
+                "name": "The Bridge of Peace",
+                "description": "A modern pedestrian bridge made of glass and steel, symbolizing the city's integration of tradition and modernity.",
                 "category": "Sightseeing"
               },
               {
-                "name": "Chronicle of Georgia",
-                "description": "A monumental sculpture that tells the story of Georgia's history, located on a hill with spectacular city views.",
+                "name": "Fabrika",
+                "description": "A trendy space that features a hostel, art galleries, and workshops, ideal for finding local crafts and enjoying street food.",
+                "category": "Food"
+              },
+              {
+                "name": "Museum of Georgia",
+                "description": "Home to a vast collection of archaeological artifacts, including the famous gold treasure of Colchis.",
+                "category": "Culture"
+              },
+              {
+                "name": "Holy Trinity Cathedral (Sameba)",
+                "description": "One of the largest Orthodox cathedrals in the world, known for its impressive architecture and beautiful interior.",
                 "category": "Sightseeing"
+              },
+              {
+                "name": "Lisi Lake",
+                "description": "A picturesque lake surrounded by nature, ideal for picnics, walks, and leisure activities.",
+                "category": "Nature"
               }
             ],
-            "summary": "Tbilisi blends history, culture, and nature beautifully. Must-visit spots include the ancient Narikala Fortress, the charming streets of Old Tbilisi, and the relaxing sulfur baths. Don't miss vibrant areas like Rustaveli Avenue and modern attractions like Fabrika for a taste of local life."
+            "summary": "Tbilisi is a vibrant blend of old and new, rich in history, culture, and natural beauty. From ancient fortresses and charming old streets to modern architecture and serene lakes, there's something for every type of traveler."
           }
         }
       ],
@@ -154,119 +159,259 @@
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 391,
+    "output_tokens": 400,
     "output_tokens_details": {
       "reasoning_tokens": 0
     },
-    "total_tokens": 495
+    "total_tokens": 504
   },
   "user": null,
   "metadata": {},
-  "output_text": "{\"places\":[{\"name\":\"Narikala Fortress\",\"description\":\"An ancient fortress overlooking Tbilisi, offering stunning views of the city and a glimpse into its historical architecture.\",\"category\":\"Sightseeing\"},{\"name\":\"Old Tbilisi\",\"description\":\"A charming area filled with narrow streets, colorful balconies, and historic buildings that showcase the city's diverse culture.\",\"category\":\"Culture\"},{\"name\":\"Rustaveli Avenue\",\"description\":\"The main thoroughfare of Tbilisi lined with shops, theaters, and cafés, perfect for a leisurely stroll or a day of sightseeing.\",\"category\":\"Sightseeing\"},{\"name\":\"Tbilisi Sulphur Baths\",\"description\":\"Famous for their therapeutic properties, these traditional baths are a unique experience in the heart of the city.\",\"category\":\"Other\"},{\"name\":\"Mtatsminda Park\",\"description\":\"A lively amusement park located on a mountain overlooking Tbilisi, with fun rides and panoramic views of the city.\",\"category\":\"Nature\"},{\"name\":\"Fabrika\",\"description\":\"A trendy spot that combines a hostel, bar, and café, attracting locals and tourists alike for its vibrant atmosphere.\",\"category\":\"Food\"},{\"name\":\"Georgian National Museum\",\"description\":\"A comprehensive museum showcasing the rich history and culture of Georgia through various exhibits.\",\"category\":\"Culture\"},{\"name\":\"Freedom Square\",\"description\":\"A central plaza in Tbilisi that is a hub for social and political gatherings, surrounded by significant buildings and landmarks.\",\"category\":\"Sightseeing\"},{\"name\":\"Chronicle of Georgia\",\"description\":\"A monumental sculpture that tells the story of Georgia's history, located on a hill with spectacular city views.\",\"category\":\"Sightseeing\"}],\"summary\":\"Tbilisi blends history, culture, and nature beautifully. Must-visit spots include the ancient Narikala Fortress, the charming streets of Old Tbilisi, and the relaxing sulfur baths. Don't miss vibrant areas like Rustaveli Avenue and modern attractions like Fabrika for a taste of local life.\"}",
+  "output_text": "{\"places\":[{\"name\":\"Narikala Fortress\",\"description\":\"An ancient fortress offering panoramic views of Tbilisi and the Kura River, accessible by a cable car.\",\"category\":\"Sightseeing\"},{\"name\":\"Tbilisi Old Town\",\"description\":\"Charming narrow streets filled with beautiful architecture, cafés, and shops that reflect the city’s rich history.\",\"category\":\"Culture\"},{\"name\":\" sulfur baths\",\"description\":\"Famous for their natural hot springs; a perfect place to relax and experience local traditions in the Abanotubani district.\",\"category\":\"Other\"},{\"name\":\"Mtatsminda Park\",\"description\":\"Located on a hill, this park offers rides, restaurants, and fantastic views of the city.\",\"category\":\"Nature\"},{\"name\":\"Rustaveli Avenue\",\"description\":\"The main avenue known for its theaters, museums, and vibrant atmosphere, representing modern Tbilisi culture.\",\"category\":\"Culture\"},{\"name\":\"The Bridge of Peace\",\"description\":\"A modern pedestrian bridge made of glass and steel, symbolizing the city's integration of tradition and modernity.\",\"category\":\"Sightseeing\"},{\"name\":\"Fabrika\",\"description\":\"A trendy space that features a hostel, art galleries, and workshops, ideal for finding local crafts and enjoying street food.\",\"category\":\"Food\"},{\"name\":\"Museum of Georgia\",\"description\":\"Home to a vast collection of archaeological artifacts, including the famous gold treasure of Colchis.\",\"category\":\"Culture\"},{\"name\":\"Holy Trinity Cathedral (Sameba)\",\"description\":\"One of the largest Orthodox cathedrals in the world, known for its impressive architecture and beautiful interior.\",\"category\":\"Sightseeing\"},{\"name\":\"Lisi Lake\",\"description\":\"A picturesque lake surrounded by nature, ideal for picnics, walks, and leisure activities.\",\"category\":\"Nature\"}],\"summary\":\"Tbilisi is a vibrant blend of old and new, rich in history, culture, and natural beauty. From ancient fortresses and charming old streets to modern architecture and serene lakes, there's something for every type of traveler.\"}",
   "output_parsed": {
     "places": [
       {
         "name": "Narikala Fortress",
-        "description": "An ancient fortress overlooking Tbilisi, offering stunning views of the city and a glimpse into its historical architecture.",
+        "description": "An ancient fortress offering panoramic views of Tbilisi and the Kura River, accessible by a cable car.",
         "category": "Sightseeing"
       },
       {
-        "name": "Old Tbilisi",
-        "description": "A charming area filled with narrow streets, colorful balconies, and historic buildings that showcase the city's diverse culture.",
+        "name": "Tbilisi Old Town",
+        "description": "Charming narrow streets filled with beautiful architecture, cafés, and shops that reflect the city’s rich history.",
         "category": "Culture"
       },
       {
-        "name": "Rustaveli Avenue",
-        "description": "The main thoroughfare of Tbilisi lined with shops, theaters, and cafés, perfect for a leisurely stroll or a day of sightseeing.",
-        "category": "Sightseeing"
-      },
-      {
-        "name": "Tbilisi Sulphur Baths",
-        "description": "Famous for their therapeutic properties, these traditional baths are a unique experience in the heart of the city.",
+        "name": " sulfur baths",
+        "description": "Famous for their natural hot springs; a perfect place to relax and experience local traditions in the Abanotubani district.",
         "category": "Other"
       },
       {
         "name": "Mtatsminda Park",
-        "description": "A lively amusement park located on a mountain overlooking Tbilisi, with fun rides and panoramic views of the city.",
+        "description": "Located on a hill, this park offers rides, restaurants, and fantastic views of the city.",
         "category": "Nature"
       },
       {
-        "name": "Fabrika",
-        "description": "A trendy spot that combines a hostel, bar, and café, attracting locals and tourists alike for its vibrant atmosphere.",
-        "category": "Food"
-      },
-      {
-        "name": "Georgian National Museum",
-        "description": "A comprehensive museum showcasing the rich history and culture of Georgia through various exhibits.",
+        "name": "Rustaveli Avenue",
+        "description": "The main avenue known for its theaters, museums, and vibrant atmosphere, representing modern Tbilisi culture.",
         "category": "Culture"
       },
       {
-        "name": "Freedom Square",
-        "description": "A central plaza in Tbilisi that is a hub for social and political gatherings, surrounded by significant buildings and landmarks.",
+        "name": "The Bridge of Peace",
+        "description": "A modern pedestrian bridge made of glass and steel, symbolizing the city's integration of tradition and modernity.",
         "category": "Sightseeing"
       },
       {
-        "name": "Chronicle of Georgia",
-        "description": "A monumental sculpture that tells the story of Georgia's history, located on a hill with spectacular city views.",
+        "name": "Fabrika",
+        "description": "A trendy space that features a hostel, art galleries, and workshops, ideal for finding local crafts and enjoying street food.",
+        "category": "Food"
+      },
+      {
+        "name": "Museum of Georgia",
+        "description": "Home to a vast collection of archaeological artifacts, including the famous gold treasure of Colchis.",
+        "category": "Culture"
+      },
+      {
+        "name": "Holy Trinity Cathedral (Sameba)",
+        "description": "One of the largest Orthodox cathedrals in the world, known for its impressive architecture and beautiful interior.",
         "category": "Sightseeing"
+      },
+      {
+        "name": "Lisi Lake",
+        "description": "A picturesque lake surrounded by nature, ideal for picnics, walks, and leisure activities.",
+        "category": "Nature"
       }
     ],
-    "summary": "Tbilisi blends history, culture, and nature beautifully. Must-visit spots include the ancient Narikala Fortress, the charming streets of Old Tbilisi, and the relaxing sulfur baths. Don't miss vibrant areas like Rustaveli Avenue and modern attractions like Fabrika for a taste of local life."
+    "summary": "Tbilisi is a vibrant blend of old and new, rich in history, culture, and natural beauty. From ancient fortresses and charming old streets to modern architecture and serene lakes, there's something for every type of traveler."
   },
   "parsed": {
     "places": [
       {
         "name": "Narikala Fortress",
-        "description": "An ancient fortress overlooking Tbilisi, offering stunning views of the city and a glimpse into its historical architecture.",
+        "description": "An ancient fortress offering panoramic views of Tbilisi and the Kura River, accessible by a cable car.",
         "category": "Sightseeing"
       },
       {
-        "name": "Old Tbilisi",
-        "description": "A charming area filled with narrow streets, colorful balconies, and historic buildings that showcase the city's diverse culture.",
+        "name": "Tbilisi Old Town",
+        "description": "Charming narrow streets filled with beautiful architecture, cafés, and shops that reflect the city’s rich history.",
         "category": "Culture"
       },
       {
-        "name": "Rustaveli Avenue",
-        "description": "The main thoroughfare of Tbilisi lined with shops, theaters, and cafés, perfect for a leisurely stroll or a day of sightseeing.",
-        "category": "Sightseeing"
-      },
-      {
-        "name": "Tbilisi Sulphur Baths",
-        "description": "Famous for their therapeutic properties, these traditional baths are a unique experience in the heart of the city.",
+        "name": " sulfur baths",
+        "description": "Famous for their natural hot springs; a perfect place to relax and experience local traditions in the Abanotubani district.",
         "category": "Other"
       },
       {
         "name": "Mtatsminda Park",
-        "description": "A lively amusement park located on a mountain overlooking Tbilisi, with fun rides and panoramic views of the city.",
+        "description": "Located on a hill, this park offers rides, restaurants, and fantastic views of the city.",
         "category": "Nature"
       },
       {
-        "name": "Fabrika",
-        "description": "A trendy spot that combines a hostel, bar, and café, attracting locals and tourists alike for its vibrant atmosphere.",
-        "category": "Food"
-      },
-      {
-        "name": "Georgian National Museum",
-        "description": "A comprehensive museum showcasing the rich history and culture of Georgia through various exhibits.",
+        "name": "Rustaveli Avenue",
+        "description": "The main avenue known for its theaters, museums, and vibrant atmosphere, representing modern Tbilisi culture.",
         "category": "Culture"
       },
       {
-        "name": "Freedom Square",
-        "description": "A central plaza in Tbilisi that is a hub for social and political gatherings, surrounded by significant buildings and landmarks.",
+        "name": "The Bridge of Peace",
+        "description": "A modern pedestrian bridge made of glass and steel, symbolizing the city's integration of tradition and modernity.",
         "category": "Sightseeing"
       },
       {
-        "name": "Chronicle of Georgia",
-        "description": "A monumental sculpture that tells the story of Georgia's history, located on a hill with spectacular city views.",
+        "name": "Fabrika",
+        "description": "A trendy space that features a hostel, art galleries, and workshops, ideal for finding local crafts and enjoying street food.",
+        "category": "Food"
+      },
+      {
+        "name": "Museum of Georgia",
+        "description": "Home to a vast collection of archaeological artifacts, including the famous gold treasure of Colchis.",
+        "category": "Culture"
+      },
+      {
+        "name": "Holy Trinity Cathedral (Sameba)",
+        "description": "One of the largest Orthodox cathedrals in the world, known for its impressive architecture and beautiful interior.",
         "category": "Sightseeing"
+      },
+      {
+        "name": "Lisi Lake",
+        "description": "A picturesque lake surrounded by nature, ideal for picnics, walks, and leisure activities.",
+        "category": "Nature"
       }
     ],
-    "summary": "Tbilisi blends history, culture, and nature beautifully. Must-visit spots include the ancient Narikala Fortress, the charming streets of Old Tbilisi, and the relaxing sulfur baths. Don't miss vibrant areas like Rustaveli Avenue and modern attractions like Fabrika for a taste of local life."
+    "summary": "Tbilisi is a vibrant blend of old and new, rich in history, culture, and natural beauty. From ancient fortresses and charming old streets to modern architecture and serene lakes, there's something for every type of traveler."
   },
   "price": {
-    "total": 0.00025,
+    "total": 0.000256,
     "inputCost": 0.000016,
-    "outputCost": 0.000235,
+    "outputCost": 0.00024,
     "currency": "USD"
+  },
+  "input": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a travel guide."
+      },
+      {
+        "role": "user",
+        "content": "What are the best places to visit in Tbilisi?"
+      }
+    ],
+    "schema": {
+      "_def": {
+        "unknownKeys": "strip",
+        "catchall": {
+          "_def": {
+            "typeName": "ZodNever"
+          },
+          "~standard": {
+            "version": 1,
+            "vendor": "zod"
+          }
+        },
+        "typeName": "ZodObject"
+      },
+      "~standard": {
+        "version": 1,
+        "vendor": "zod"
+      },
+      "_cached": {
+        "shape": {
+          "places": {
+            "_def": {
+              "type": {
+                "_def": {
+                  "unknownKeys": "strip",
+                  "catchall": {
+                    "_def": {
+                      "typeName": "ZodNever"
+                    },
+                    "~standard": {
+                      "version": 1,
+                      "vendor": "zod"
+                    }
+                  },
+                  "typeName": "ZodObject"
+                },
+                "~standard": {
+                  "version": 1,
+                  "vendor": "zod"
+                },
+                "_cached": {
+                  "shape": {
+                    "name": {
+                      "_def": {
+                        "checks": [],
+                        "typeName": "ZodString",
+                        "coerce": false
+                      },
+                      "~standard": {
+                        "version": 1,
+                        "vendor": "zod"
+                      }
+                    },
+                    "description": {
+                      "_def": {
+                        "checks": [],
+                        "typeName": "ZodString",
+                        "coerce": false
+                      },
+                      "~standard": {
+                        "version": 1,
+                        "vendor": "zod"
+                      }
+                    },
+                    "category": {
+                      "_def": {
+                        "values": [
+                          "Sightseeing",
+                          "Food",
+                          "Culture",
+                          "Nature",
+                          "Other"
+                        ],
+                        "typeName": "ZodEnum"
+                      },
+                      "~standard": {
+                        "version": 1,
+                        "vendor": "zod"
+                      },
+                      "_cache": {}
+                    }
+                  },
+                  "keys": [
+                    "name",
+                    "description",
+                    "category"
+                  ]
+                }
+              },
+              "minLength": null,
+              "maxLength": null,
+              "exactLength": null,
+              "typeName": "ZodArray"
+            },
+            "~standard": {
+              "version": 1,
+              "vendor": "zod"
+            }
+          },
+          "summary": {
+            "_def": {
+              "checks": [],
+              "typeName": "ZodString",
+              "coerce": false
+            },
+            "~standard": {
+              "version": 1,
+              "vendor": "zod"
+            }
+          }
+        },
+        "keys": [
+          "places",
+          "summary"
+        ]
+      }
+    },
+    "schemaName": "tbilisi_guide"
   }
 }
