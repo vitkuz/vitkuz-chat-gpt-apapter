@@ -11,7 +11,7 @@ export const CHAT_GPT_MODELS = {
 export type ChatGptModel = (typeof CHAT_GPT_MODELS)[keyof typeof CHAT_GPT_MODELS];
 
 export const isStructuredOutputSupported = (model: string): boolean => {
-    const supportedPrefixes = ['gpt-4o', 'gpt-4o-mini', 'o1']; // o1 supposedly supports it in some versions soon, but for now gpt-4o is the main one. 
+    const supportedPrefixes = ['gpt-4o', 'gpt-4o-mini', 'o1']; // o1 supposedly supports it in some versions soon, but for now gpt-4o is the main one.
     // Actually per docs: gpt-4o-mini, gpt-4o-2024-08-06 and later.
 
     if (model.startsWith('gpt-4o-mini')) return true;

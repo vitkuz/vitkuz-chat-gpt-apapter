@@ -112,13 +112,13 @@ async function testDefaults() {
         client: mockClient,
         defaults: {
             model: CHAT_GPT_MODELS.GPT_3_5_TURBO,
-            schema: Schema
-        }
+            schema: Schema,
+        },
     } as any);
 
     try {
         await incompatibleCompletion({
-            messages: [{ role: 'user', content: 'test' }]
+            messages: [{ role: 'user', content: 'test' }],
         });
         throw new Error('Should have thrown error for incompatible model');
     } catch (e: any) {

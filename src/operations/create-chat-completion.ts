@@ -1,6 +1,7 @@
 import { zodTextFormat } from 'openai/helpers/zod';
 import { ChatGptContext, CreateChatCompletionInput, CreateChatCompletionOutput } from '../types';
 import { isStructuredOutputSupported } from '../models';
+import { calculatePrice } from '../pricing';
 
 export const createChatCompletion =
     (ctx: ChatGptContext) =>
@@ -21,6 +22,7 @@ export const createChatCompletion =
             logger?.debug('chat-gpt:createChatCompletion:start', { data: mergedInput });
 
             try {
+                let response: any;
                 if (schema) {
                     if (!isStructuredOutputSupported(mergedInput.model)) {
                         throw new Error(
@@ -29,7 +31,7 @@ export const createChatCompletion =
                         );
                     }
 
-                    const response = await (client.responses as any).parse({
+                    response = await (client.responses as any).parse({
                         ...rest,
                         input: messages,
                         text: {
@@ -37,23 +39,27 @@ export const createChatCompletion =
                         },
                     });
 
-                    logger?.debug('chat-gpt:createChatCompletion:success', { data: response });
-
-                    return {
+                    response = {
                         ...response,
                         parsed: response.output_parsed,
-                    } as CreateChatCompletionOutput;
+                    };
+                } else {
+                    // Fallback to regular chat completion for non-zod calls
+                    response = await client.chat.completions.create({
+                        ...mergedInput,
+                    } as any);
                 }
 
-                // Fallback to regular chat completion for non-zod calls
-                // or we can use client.responses.create if we want to be consistent
-                const response = await client.chat.completions.create({
-                    ...mergedInput,
-                } as any);
+                const price = calculatePrice(mergedInput.model, response.usage);
 
-                logger?.debug('chat-gpt:createChatCompletion:success', { data: response });
+                const output = {
+                    ...response,
+                    price,
+                } as CreateChatCompletionOutput;
 
-                return response as CreateChatCompletionOutput;
+                logger?.debug('chat-gpt:createChatCompletion:success', { data: output });
+
+                return output;
             } catch (error) {
                 logger?.debug('chat-gpt:createChatCompletion:error', { error });
                 throw error;

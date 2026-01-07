@@ -6,6 +6,13 @@ export interface Logger {
     [key: string]: any;
 }
 
+export interface PriceInfo {
+    total: number;
+    inputCost: number;
+    outputCost: number;
+    currency: string;
+}
+
 export interface ChatGptDefaults {
     model?: string;
     temperature?: number;
@@ -75,5 +82,9 @@ export interface CreateChatCompletionOutput {
         prompt_tokens: number;
         completion_tokens: number;
         total_tokens: number;
+        prompt_tokens_details?: {
+            cached_tokens?: number;
+        };
     };
+    price?: PriceInfo;
 }

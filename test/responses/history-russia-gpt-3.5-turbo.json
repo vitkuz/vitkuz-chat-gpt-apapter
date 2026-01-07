@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-CvNw3bZLYuzCI0YpBCU7XKPYvy7xE",
+  "object": "chat.completion",
+  "created": 1767792739,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Russia's history stretches back over a thousand years to the medieval state of Kievan Rus, formed by Slavic tribes united under the rule of the Varangian prince Rurik in the 9th century. The Mongol invasion in the 13th century devastated the region, leading to the fragmentation of Kievan Rus and the rise of the Grand Duchy of Moscow as a powerful principality in the 14th century.\n\nUnder Ivan the Terrible in the 16th century, the Grand Duchy of Moscow transformed into the Tsardom of Russia and began its expansion across Siberia and into Central Asia. The Romanov dynasty ruled Russia from 1613 until the Russian Revolution in 1917, during which time the country underwent periods of territorial expansion, reform, and cultural flourishing.\n\nIn the early 18th century, Peter the Great modernized and westernized Russia, establishing it as a European power. Catherine the Great continued this trend in the late 18th century, expanding Russia's borders to the Black Sea and the Caucasus.\n\nThe 19th century saw Russia embroiled in various wars, including the Napoleonic Wars and the Crimean War. The country also underwent industrialization and social upheaval, culminating in the Russian Revolution of 1917, which led to the overthrow of the Tsar and the establishment of the Soviet Union.\n\nUnder the Bolsheviks led by Vladimir Lenin, Russia became the Soviet Union, a communist state that wielded immense power and influence on the world stage. The Soviet Union emerged victorious from World War II but faced internal dissent and economic challenges in the following decades.\n\nThe end of the Cold War in 1991 brought about the dissolution of the Soviet Union and the emergence of the Russian Federation as an independent country under the leadership of Boris Yeltsin. Vladimir Putin, who became president in 2000, has since consolidated power in Russia, overseeing a mix of economic reforms, geopolitical assertiveness, and authoritarian rule. Russia continues to be a major player in global affairs, with a rich history and culture that shapes its identity to this day.",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 23,
+    "completion_tokens": 427,
+    "total_tokens": 450,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "price": {
+    "total": 0.000652,
+    "inputCost": 0.000012,
+    "outputCost": 0.000641,
+    "currency": "USD"
+  }
+}
